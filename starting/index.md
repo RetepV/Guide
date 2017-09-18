@@ -32,8 +32,8 @@ Arachne-PNR and yosys tools later.
 **For Fedora-based distributions, use the following command:**
 
   ```sh
-  nf install @development-tools clang bison flex readline-devel \
-  gawk tcl-devel libffi-devel git mercurial graphviz python-xdot \
+  nf install @development-tools clang bison flex readline-devel
+  gawk tcl-devel libffi-devel git mercurial graphviz python-xdot
   pkgconfig python python3 libftdi-devel vim htop screen iverilog
   ```
 
@@ -49,11 +49,13 @@ The following steps are for installing software on macOS
 and cover the building and installation of three tools, which
 are required for programming the myStorm board.
 
-This guide assumes you have Homebrew (https://brew.sh/) installed.
+This guide assumes you have [Homebrew](https://brew.sh/) installed.
 
 Enabling xcode command line tools
 
-  ```xcode-select --install```
+  ```sh
+  xcode-select --install
+  ```
 
 **Downloading and installing pre-requisites**
 
@@ -61,7 +63,9 @@ These are needed for compiling and installing the icestorm,
 Arachne-PNR and yosys tools later.
 
 
-  ```brew install libftdi0 python3 gawk pkg-config libffi bison mercurial```
+  ```sh
+  brew install libftdi0 python3 gawk pkg-config libffi bison mercurial
+  ```
 
 Instalation of IceStorm for linux and macOS
 -------------------------------------------
@@ -70,28 +74,34 @@ Instalation of IceStorm for linux and macOS
 
 Starting in an empty directory:
 
-  ```git clone https://github.com/cliffordwolf/icestorm.git icestorm
+  ```sh
+  git clone https://github.com/cliffordwolf/icestorm.git icestorm
   cd icestorm
   make -j8
-  sudo make install```
+  sudo make install
+  ```
 
 **Downloading and installing arachne-pnr**
 
 Starting in the same directory:
 
-  ```git clone https://github.com/cseed/arachne-pnr.git arachne-pnr
+  ```sh
+  git clone https://github.com/cseed/arachne-pnr.git arachne-pnr
   cd arachne-pnr
   make -j8
-  sudo make install```
+  sudo make install
+  ```
 
 **Downloading and installing Yosys**
 
 Starting in the same directory:
 
-  ```git clone https://github.com/cliffordwolf/yosys.git yosys
+  ```sh
+  git clone https://github.com/cliffordwolf/yosys.git yosys
   cd yosys
   make -j8
-  sudo make install```
+  sudo make install
+  ```
 
 Installation guide for Windows
 ------------------------------
@@ -107,17 +117,23 @@ From the official python website download and install [**Python2.7**](https://ww
 Then add to your path. With the default install locations open a command
 line and type:
 
-  ```set PATH=%PATH%;C:\Python27;C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Scripts```
+  ```sh
+  set PATH=%PATH%;C:\Python27;C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Scripts
+  ```
 
 **Downloading and installing APIO**
 
 In a command line:
 
-  ```pip install apio```
+  ```sh
+  pip install apio
+  ```
 
 Then to download all the apio packages:
 
- ```apio install -a```
+ ```sh
+ apio install -a
+ ```
 
 
 
@@ -128,7 +144,9 @@ You will want to access four repositories:
 
 **The MyStorm tutorial**
 
-  ```git clone https://github.com/mystorm-org/Guide.git```
+  ```sh
+  git clone https://github.com/mystorm-org/Guide.git
+  ```
 
 Your first design (Mac/Linux)
 -----------------------------
@@ -137,7 +155,9 @@ Completed examples are in the ``tutorial`` directory. We'll build the very
 simplest of these to drive the red LED on the board.  First change into the
 directory with the completed examples::
 
+  ``sh
   cd starting/tutorial/blink
+  ```
 
 Then ``make`` the Blink example::
 
@@ -151,11 +171,15 @@ Your first design (Windows)
 
 From ``cheat_sheet``, change to the ``blink`` directory
 
-  ```cd starting\tutorial\blink```
+  ```sh
+  cd starting\tutorial\blink
+  ```
 
 Then synthesize the Blink example with ``apio``::
 
-  ```apio build --size 8k --type hx --pack tq144:4k```
+  ```sh
+  apio build --size 8k --type hx --pack tq144:4k
+  ```
 
 This will synthesize the code in ``blink.v`` to a bitstream in
 ``hardware.bin``.
@@ -165,11 +189,15 @@ Uploading your design (Mac/Linux)
 
 For Linux:
 
-  ```make SERIAL=/dev/ttyACM0 upload-linux```
+  ```sh
+  make SERIAL=/dev/ttyACM0 upload-linux
+  ```
 
 For Mac:
 
-  ```make SERIAL=/dev/cu.usbmodem1421 upload-linux```
+  ```sh
+  make SERIAL=/dev/cu.usbmodem1421 upload-linux
+  ```
 
 **MacOS** - Beware that if you have an earlier version of the CH340 driver you may get a [kernel panic](https://tzapu.com/ch340-ch341-serial-adapters-macos-sierra/) restart try updating to a [newer](https://blog.sengotta.net/signed-mac-os-driver-for-winchiphead-ch340-serial-bridge/)
 
@@ -203,5 +231,3 @@ your computer.  Then plug it in again and re-check all settings above.
 
 Your first design
 -----------------
-
-.. figure:: mystorm-led.jpg

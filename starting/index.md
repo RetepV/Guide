@@ -3,7 +3,7 @@ MyStorm Setup
 
 | Alan Wood, Dan Gorringe
 
-
+![mystorm](./BlackIce.jpg)
 
 Installation prerequisites for Linux
 ------------------------------------
@@ -15,8 +15,7 @@ The following steps are for installing software on Ubuntu 16.04 or
 later, and cover the building and installation of three tools, which
 are required for programming the myStorm board.  You can use these
 for a laptop running Linux, or to install the tools on a Raspberry
-Pi. Users of other flavors of Linux wil(l need to modify these
-instructions slightly for their systems.
+Pi. Users of other flavours of Linux will.
 
 Downloading and installing pre-requisites
 
@@ -24,22 +23,19 @@ These are needed for compiling and installing the icestorm,
 Arachne-PNR and yosys tools later.
 
 **For Debian-based distributions, use the following command:**
-  ```verilog
-  always @(posedge clk) begin
-    counter_slow <= counter_slow + 1;
-  end
-  ```
 
-  ```sh
+  ```bash
   sudo apt-get install build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python
   python3 libftdi-dev vim htop screen iverilog
   ```
 
 **For Fedora-based distributions, use the following command:**
 
-  ```nf install @development-tools clang bison flex readline-devel \
+  ```sh
+  nf install @development-tools clang bison flex readline-devel \
   gawk tcl-devel libffi-devel git mercurial graphviz python-xdot \
-  pkgconfig python python3 libftdi-devel vim htop screen iverilog```
+  pkgconfig python python3 libftdi-devel vim htop screen iverilog
+  ```
 
 **Note** that the tools work fine on RaspberryPi.
 

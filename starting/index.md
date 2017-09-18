@@ -24,7 +24,7 @@ Arachne-PNR and yosys tools later.
 
 **For Debian-based distributions, use the following command:**
 
-  ```bash
+  ```sh
   sudo apt-get install build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python
   python3 libftdi-dev vim htop screen iverilog
   ```
@@ -156,7 +156,7 @@ simplest of these to drive the red LED on the board.  First change into the
 directory with the completed examples::
 
   ``sh
-  cd starting/tutorial/blink
+  cd tutorial/blink
   ```
 
 Then ``make`` the Blink example::

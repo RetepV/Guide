@@ -129,7 +129,7 @@ In a command line:
   pip install apio
   ```
 
-Then to download all the apio packages:
+Then to download all the apio packages
 
  ```sh
  apio install -a
@@ -159,7 +159,7 @@ directory with the completed examples
   cd Guide/tutorial/blink
   ```
 
-Then ``make`` the Blink example::
+Then ``make`` the Blink example
 
   make
 
@@ -175,7 +175,7 @@ From ``cheat_sheet``, change to the ``blink`` directory
   cd Guide\tutorial\blink
   ```
 
-Then synthesize the Blink example with ``apio``::
+Then synthesize the Blink example with ``apio``
 
   ```sh
   apio build --size 8k --type hx --pack tq144:4k
@@ -228,6 +228,3 @@ Uploading your design (Windows) (2)
 
 **Note.** If you experience very slow download rates, unplug the device from
 your computer.  Then plug it in again and re-check all settings above.
-
-Your first design
------------------

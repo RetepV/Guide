@@ -196,6 +196,9 @@ For Mac::
 
   make SERIAL=/dev/cu.usbmodem1421 upload-linux
 
+**MacOS** - Beware that if you have an earlier version of the CH340 driver you may get a kernel panic (restart) try updating to a newer version such as this one https://blog.sengotta.net/signed-mac-os-driver-for-winchiphead-ch340-serial-bridge/
+More info here : https://tzapu.com/ch340-ch341-serial-adapters-macos-sierra/
+
 You may need to use a different value for ``SERIAL`` depending on your
 machine.
 

@@ -4,10 +4,6 @@ MyStorm Setup
 | Alan Wood, Dan Gorringe
 
 
-MyStorm BlackIce Board
-----------------------
-
-.. figure:: mystorm.jpg
 
 Installation prerequisites for Linux
 ------------------------------------

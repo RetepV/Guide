@@ -156,7 +156,7 @@ simplest of these to drive the red LED on the board.  First change into the
 directory with the completed examples::
 
   ``sh
-  cd tutorial/blink
+  cd Guide/tutorial/blink
   ```
 
 Then ``make`` the Blink example::
@@ -172,7 +172,7 @@ Your first design (Windows)
 From ``cheat_sheet``, change to the ``blink`` directory
 
   ```sh
-  cd starting\tutorial\blink
+  cd Guide\tutorial\blink
   ```
 
 Then synthesize the Blink example with ``apio``::

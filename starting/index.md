@@ -28,9 +28,16 @@ These are needed for compiling and installing the icestorm,
 Arachne-PNR and yosys tools later.
 
 **For Debian-based distributions, use the following command:**
+  ```verilog
+  always @(posedge clk) begin
+    counter_slow <= counter_slow + 1;
+  end
+  ```
 
-  ```sudo apt-get install build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python
-  python3 libftdi-dev vim htop screen iverilog```
+  ```sh
+  sudo apt-get install build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python
+  python3 libftdi-dev vim htop screen iverilog
+  ```
 
 **For Fedora-based distributions, use the following command:**
 
@@ -103,7 +110,7 @@ the myStorm board.
 
 **Downloading and installing Python**
 
-From the official python website download and install **Python2.7** (https://www.python.org/downloads/release/python-2713)
+From the official python website download and install [**Python2.7**](https://www.python.org/downloads/release/python-2713)
 
 Then add to your path. With the default install locations open a command
 line and type:
@@ -127,7 +134,7 @@ Cloning the tutorial code from GitHub
 
 You will want to access four repositories:
 
-* The MyStorm tutorial
+**The MyStorm tutorial**
 
   ```git clone https://github.com/mystorm-org/Guide.git```
 

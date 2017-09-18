@@ -155,7 +155,7 @@ Completed examples are in the ``tutorial`` directory. We'll build the very
 simplest of these to drive the red LED on the board.  First change into the
 directory with the completed examples::
 
-  ``sh
+  ```sh
   cd Guide/tutorial/blink
   ```
 

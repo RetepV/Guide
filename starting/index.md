@@ -29,16 +29,14 @@ Arachne-PNR and yosys tools later.
 
 **For Debian-based distributions, use the following command:**
 
-  ```sudo apt-get install build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python 
+  ```sudo apt-get install build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python
   python3 libftdi-dev vim htop screen iverilog```
 
 **For Fedora-based distributions, use the following command:**
 
-::
-
-  dnf install @development-tools clang bison flex readline-devel \
+  ```nf install @development-tools clang bison flex readline-devel \
   gawk tcl-devel libffi-devel git mercurial graphviz python-xdot \
-  pkgconfig python python3 libftdi-devel vim htop screen iverilog
+  pkgconfig python python3 libftdi-devel vim htop screen iverilog```
 
 **Note** that the tools work fine on RaspberryPi.
 
@@ -56,18 +54,15 @@ This guide assumes you have Homebrew (https://brew.sh/) installed.
 
 Enabling xcode command line tools
 
-::
-
-  xcode-select --install
+  ```xcode-select --install```
 
 **Downloading and installing pre-requisites**
 
 These are needed for compiling and installing the icestorm,
 Arachne-PNR and yosys tools later.
 
-::
 
-  brew install libftdi0 python3 gawk pkg-config libffi bison mercurial
+  ```brew install libftdi0 python3 gawk pkg-config libffi bison mercurial```
 
 Instalation of IceStorm for linux and macOS
 -------------------------------------------
@@ -76,34 +71,28 @@ Instalation of IceStorm for linux and macOS
 
 Starting in an empty directory:
 
-::
-
-  git clone https://github.com/cliffordwolf/icestorm.git icestorm
+  ```git clone https://github.com/cliffordwolf/icestorm.git icestorm
   cd icestorm
   make -j8
-  sudo make install
+  sudo make install```
 
 **Downloading and installing arachne-pnr**
 
 Starting in the same directory:
 
-::
-
-  git clone https://github.com/cseed/arachne-pnr.git arachne-pnr
+  ```git clone https://github.com/cseed/arachne-pnr.git arachne-pnr
   cd arachne-pnr
   make -j8
-  sudo make install
+  sudo make install```
 
 **Downloading and installing Yosys**
 
 Starting in the same directory:
 
-::
-
-  git clone https://github.com/cliffordwolf/yosys.git yosys
+  ```git clone https://github.com/cliffordwolf/yosys.git yosys
   cd yosys
   make -j8
-  sudo make install
+  sudo make install```
 
 Installation guide for Windows
 ------------------------------
@@ -119,23 +108,17 @@ From the official python website download and install **Python2.7** (https://www
 Then add to your path. With the default install locations open a command
 line and type:
 
-::
-
-  set PATH=%PATH%;C:\Python27;C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Scripts
+  ```set PATH=%PATH%;C:\Python27;C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Scripts```
 
 **Downloading and installing APIO**
 
 In a command line:
 
-::
-
-  pip install apio
+  ```pip install apio```
 
 Then to download all the apio packages:
 
-::
-
-  apio install -a
+ ```apio install -a```
 
 
 
@@ -146,9 +129,7 @@ You will want to access four repositories:
 
 * The MyStorm tutorial
 
-::
-
-   git clone https://github.com/mystorm-org/Guide.git
+  ```git clone https://github.com/mystorm-org/Guide.git```
 
 Your first design (Mac/Linux)
 -----------------------------
@@ -171,13 +152,11 @@ Your first design (Windows)
 
 From ``cheat_sheet``, change to the ``blink`` directory
 
-::
-
-  cd starting\tutorial\blink
+  ```cd starting\tutorial\blink```
 
 Then synthesize the Blink example with ``apio``::
 
-  apio build --size 8k --type hx --pack tq144:4k
+  ```apio build --size 8k --type hx --pack tq144:4k```
 
 This will synthesize the code in ``blink.v`` to a bitstream in
 ``hardware.bin``.
@@ -185,13 +164,13 @@ This will synthesize the code in ``blink.v`` to a bitstream in
 Uploading your design (Mac/Linux)
 ---------------------------------
 
-For Linux::
+For Linux:
 
-  make SERIAL=/dev/ttyACM0 upload-linux
+  ```make SERIAL=/dev/ttyACM0 upload-linux```
 
-For Mac::
+For Mac:
 
-  make SERIAL=/dev/cu.usbmodem1421 upload-linux
+  ```make SERIAL=/dev/cu.usbmodem1421 upload-linux```
 
 **MacOS** - Beware that if you have an earlier version of the CH340 driver you may get a [kernel panic](https://tzapu.com/ch340-ch341-serial-adapters-macos-sierra/) restart try updating to a [newer](https://blog.sengotta.net/signed-mac-os-driver-for-winchiphead-ch340-serial-bridge/)
 

@@ -34,18 +34,15 @@ upload-linux:
 	cat $(SERIAL) > /dev/null 2>&1 &
 	stty -F $(SERIAL) raw
 	cat chip.bin > $(SERIAL)
-	ps x | grep "cat $(SERIAL)" | head -1 | \
-	       sed -e 's/\([[:digit:]]*\) .*$$/now run "kill \1"/'
+	kill `ps x | grep "cat $(SERIAL)" | head -1 | sed -e 's/\([[:digit:]]*\) .*$$/\1/'`
 
 # Upload to a Mac, may have to change name of the port accordingly
-
 .PHONY: upload-mac
 upload-mac:
 	cat $(SERIAL) > /dev/null 2>&1 &
 	stty -f $(SERIAL) raw ;\
 	cat chip.bin > $(SERIAL) ;\
-	ps x | grep "cat $(SERIAL)" | head -1 | \
-	       sed -e 's/\([[:digit:]]*\) .*$$/now run "kill \1"/'
+	kill `ps x | grep "cat $(SERIAL)" | head -1 | sed -e 's/\([[:digit:]]*\) .*$$/\1/'`
 
 .PHONY: clean
 clean:
